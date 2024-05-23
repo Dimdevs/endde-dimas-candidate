@@ -33,6 +33,22 @@ class UserSeeder extends Seeder
                 'status' => 1,
                 'email_verified_at' => Carbon::now()->setTimeZone('Asia/Jakarta')
             ],
+            [
+                'name' => 'PT Endee Communication',
+                'email' => 'endde.com@gmail.com',
+                'password' => bcrypt('endee123'),
+                'role' => 'client',
+                'status' => 1,
+                'email_verified_at' => Carbon::now()->setTimeZone('Asia/Jakarta')
+            ],
+            [
+                'name' => 'PT Endee Communication Admin',
+                'email' => 'admin.enddecom@gmail.com',
+                'password' => bcrypt('adminendee123'),
+                'role' => 'super_admin',
+                'status' => 1,
+                'email_verified_at' => Carbon::now()->setTimeZone('Asia/Jakarta')
+            ],
         ];
 
         foreach ($accounts as $account) {
@@ -44,6 +60,9 @@ class UserSeeder extends Seeder
                         break;
                     case 'admin':
                         $user->assignRole('admin');
+                        break;
+                    case 'client':
+                        $user->assignRole('client');
                         break;
                 }
             }

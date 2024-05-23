@@ -5,15 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Banner extends Model
+class Item extends Model
 {
     use HasFactory;
 
-    protected $table = 'banners';
+    protected $table = "items";
     protected $primaryKey = 'id';
     protected $fillable = [
-        'id',
-        'title',
+        'name',
+        'price',
+        'description',
         'image',
     ];
+
+    public function order()
+    {
+        return $this->hasMany(Order::class, 'item_id');
+    }
 }

@@ -2,7 +2,7 @@
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand py-3">
             <a href="{{ route('admin.dashboard') }}">
-                <img src="{{ asset('template/base-admin/dist/assets/figma-assets/LOGO.png') }}" style="max-width: 125px;" alt="icas-logo">
+                <img src="{{ asset('template/base-admin/dist/assets/figma-assets/LOGO.png') }}" style="max-width: 210px;" alt="icas-logo">
             </a>
         </div>
 

@@ -25,6 +25,10 @@ class RoleSeeder extends Seeder
                 'name' => 'super_admin',
                 'guard_name' => 'web'
             ],
+            [
+                'name' => 'client',
+                'guard_name' => 'web'
+            ],
         ];
 
         foreach ($roles as $role) {
